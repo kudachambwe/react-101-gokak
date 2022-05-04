@@ -160,7 +160,7 @@ Note that the page will automatically reload if you make changes to the code.
 
 If you make a mistake/typo/error you will see the build errors and lint warnings in the console: 
 
-![e33f94bd22f8a204b0f16adee9b58995.png](:/859c04c116724c8bbf1ca236804a8ef0)
+![build errors](../assets/imgs/build-errors.png)
 
 2. `$ npm test`
 

@@ -20,13 +20,13 @@ p {
 }
 ```
 
-![drawio](:/594ef7f4c7d94f70bd02462bdcd17c9b)
+![styling definitions](../assets/imgs/sketch-styling-defs)
 * * *
 ## Exercise 1: Plan the app 💡 
 
 Given this as a first sketch/wireframe for your application. Perform the following tasks: 
 
-![drawio](:/976a0cb9f78d41018e052ddc8ddd4f08)
+![wireframe](../assets/imgs/wireframe-ex3.1)
 
 *Excersise 2.1:* 
 * Draw boxes/cirles around **possible** elements in the SPA
@@ -69,11 +69,11 @@ $ cd my-first-webpage
 
 
 2. Have you chosen a palette? 
-![reat101-2.png](:/7448010e3c5542d0af4e04be2848e73f)
+![reat101-2.png](../assets/imgs/palette-ex2.2.png)
 
 
 Excersise 3.1. Create a React app from the following design: 
-![react101-design.png](:/f18874fa73304185b449b61adaccdcd2)
+![react101-design.png](../assets/imgs/design-ex.3.3.png)
 
 
 ## Exercise 2B:  Look Ma, I made an App! 💝
