@@ -34,6 +34,7 @@ How many like it?
 	![sketch comparison ](../assets/imgs/libraries.png)
  
  ![detail sketch description](../assets/imgs/sketch-framework-v-library.svg)
+ <img src="../assets/imgs/sketch-framework-v-library.svg">
  
  * In the end; "The job determines the tool" - Me  👴
 * * *
@@ -53,6 +54,7 @@ How many like it?
 		* `document.createElement(element)`
 		* `document.getElementById(id).onClick = function(){code}`
 ![dom sketch](../assets/imgs/sketch-html-dom)
+ <img src="../assets/imgs/sketch-html-dom">
 
 * JSX
 	* Javascript XML - allows us to write HTML in React
