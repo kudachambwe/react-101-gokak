@@ -13,9 +13,9 @@
 * [Frontend frameworks Trends](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks/)
 
 How many use it? 
-![react usage](./../assets/imgs/react-usage.png)
+![react usage](../assets/imgs/react-usage.png)
 How many like it? 
-![satisfaction](./../assets/imgs/react-satisfaction.png)
+![satisfaction](../assets/imgs/react-satisfaction.png)
 * * *
 
 
@@ -33,8 +33,8 @@ How many like it?
 	* 👎️  Easier to make bad decisions and ruin your application
 	![sketch comparison ](../assets/imgs/libraries.png)
  
- ![detail sketch description](../assets/imgs/sketch-framework-v-library.svg)
- <img src="../assets/imgs/sketch-framework-v-library.svg">
+ ![detail sketch description](../assets/imgs/sketch-framework-v-library)
+ <img src="../assets/imgs/sketch-framework-v-library">
  
  * In the end; "The job determines the tool" - Me  👴
 * * *
@@ -53,8 +53,8 @@ How many like it?
 		* `element.setAttribute(attribute, value)`
 		* `document.createElement(element)`
 		* `document.getElementById(id).onClick = function(){code}`
-![dom sketch](../assets/imgs/sketch-html-dom)
- <img src="../assets/imgs/sketch-html-dom">
+![dom sketch](../assets/imgs/sketch-html-dom.svg)
+ <img src="../assets/imgs/sketch-html-dom.svg">
 
 * JSX
 	* Javascript XML - allows us to write HTML in React
@@ -106,6 +106,7 @@ How many like it?
 	* Default method is to load new pages (in this case: views) entirely, but SPA takes new data from the webserver by interacting with the page and refreshing the current web page.
 	* The app is loaded from one page, and when interacting with the page the necessary elements are simply loaded - not a a full app reload. 
 ![spa sketch](../assets/imgs/sketch-spa-v-mpa)
+ <img src="../assets/imgs/sketch-spa-v-mpa">
 
 
 
@@ -203,7 +204,7 @@ const MoneyRich = () => {
 	
 * Method #1: `if()` statement
 	
-```
+```js
 const BorrowMoney = ({ gotMoney }) => {
 
 	if (gotMoney) {
@@ -215,7 +216,7 @@ const BorrowMoney = ({ gotMoney }) => {
 
 * Method #2: Logical `&&` Operator
 
-```
+```js
 const BorrowMoney = ({ gotMoney }) => {
 	{ gotMoney &&
 		return <MoneyRich />
@@ -225,7 +226,7 @@ const BorrowMoney = ({ gotMoney }) => {
 
 * Method #3: Ternary Operator  `condition ? true : false`
 
-```
+```js
 const BorrowMoney = ({ gotMoney }) => {
 	return (
 		{ gotMoney ? <MoneyRich/> : <MoneyBroke/>}
