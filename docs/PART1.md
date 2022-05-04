@@ -33,7 +33,7 @@ How many like it?
 	* 👎️  Easier to make bad decisions and ruin your application
 	![sketch comparison ](../assets/imgs/libraries.png)
  
- ![detail sketch description](../assets/imgs/sketch-framework-v-library)
+ ![detail sketch description](../assets/imgs/sketch-framework-v-library.svg)
  
  * In the end; "The job determines the tool" - Me  👴
 * * *
