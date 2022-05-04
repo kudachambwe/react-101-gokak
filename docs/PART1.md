@@ -13,9 +13,9 @@
 * [Frontend frameworks Trends](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks/)
 
 How many use it? 
-![5e9b2f5489bf7233805c6f82a8ef6d4f.png](:/2dc4ac61fc4f4fc3a9966150a8bbe79d)
+![react usage](./../assets/imgs/react-usage.png)
 How many like it? 
-![6b1d456a9705d34730e383e9b2275455.png](:/404b841f0a7841f9be15cc8aeafe0684)
+![satisfaction](./../assets/imgs/react-satisfaction.png)
 * * *
 
 
@@ -27,13 +27,13 @@ How many like it?
 * **Frameworks:**
 	* 👍️  Ready to go with best practices to follow - easier to folllow a common standard
 	* 👎️  Can overcomplicate things, be slower, long loading time and lots to learn
-	![1bf44d5596b3e647746f9a579809e988.png](:/db932e2e4bb64f0bb350c4c92aa1ad05)
+	![frameworks](../assets/imgs/frameworks.png)
 * **Libaries:**
 	* 👍️  You tailor the app based what you/your team wants and needs - you have the choice and full control
 	* 👎️  Easier to make bad decisions and ruin your application
-	![816fb92c90defd7178d3b4b4ded89504.png](:/ab25fbd5f17b4c86aa2d24a0349be956)
+	![sketch comparison ](../assets/imgs/libraries.png)
  
- ![drawio](:/c20b3e1cde5f4e7caf483b4d4bca6595)
+ ![detail sketch description](../assets/imgs/sketch-framework-v-library)
  
  * In the end; "The job determines the tool" - Me  👴
 * * *
@@ -52,7 +52,7 @@ How many like it?
 		* `element.setAttribute(attribute, value)`
 		* `document.createElement(element)`
 		* `document.getElementById(id).onClick = function(){code}`
-![drawio](:/9233191f1ed742a095e197ee2ad06578)
+![dom sketch](../assets/imgs/sketch-html-dom)
 
 * JSX
 	* Javascript XML - allows us to write HTML in React
@@ -103,14 +103,17 @@ How many like it?
 * **SPA = Single Page Application** 
 	* Default method is to load new pages (in this case: views) entirely, but SPA takes new data from the webserver by interacting with the page and refreshing the current web page.
 	* The app is loaded from one page, and when interacting with the page the necessary elements are simply loaded - not a a full app reload. 
-![drawio](:/12d1f21734f4414c95ebfc99374033de)
+![spa sketch](../assets/imgs/sketch-spa-v-mpa)
 
-![46b7eff0d335c5cf7ee2ec4a5f03678c.png](:/1ec629c8797e4a7e82efbe9ca821835d)
+
 
 * Components
 	* 	Independent and reusable bits of code. An entity of its own. Car, House, Person, Book, etc etc.
 	* 	Work in isolation and can be either "Class" or "Function" Components
 	* 	Note: In Reac; always start component names with a capital letter. `MyComponent, Header, ComponentWithVeryLongName`
+
+![components?](../assets/imgs/fun-drawing-components.png)
+
 ```js
 import React, { Component } from "react";
 
