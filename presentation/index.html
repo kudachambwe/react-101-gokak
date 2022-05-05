@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>React 101</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +17,807 @@
 	<link rel="stylesheet" href="dist/theme/night.css">
 
 	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="plugin/highlight/zenburn.css">
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>Slide 1 <h1>test</h1>
+			<section class="intro-page">
+				<img src="resources/react-logo.svg" width="15%" />
+				<h2>React 101: Introduction to React.js</h2>
+				<h3>Gokstad Akademiet</h3>
+
 			</section>
-			<section>Slide 2</section>
+
+			<!-- Part 1 -->
+			<!-- <section data-markdown="parts/part1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"> -->
+			</section>
+
+			<!-- Slides are separated by three dashes (the default) -->
+			<section data-markdown>
+				<textarea data-template>
+					## Agenda
+					
+					Part 1. Introduction ℹ️
+
+					Part 2. Digging a little deeper 🕳️
+
+					Part 3. Getting our hands dirty 🛠️
+
+                    </textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					## Part 1. Introduction ℹ️
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					## Hello! 👋
+
+					---
+
+					- Kudakwashe Kidwell Chambwe (27 yrs)
+					
+					--
+
+					- 🤱 + 🇿🇼 Zimbabwe 🛫 + 🇸🇯 Norge 🏡 Lørenskog ⏭ 🚌 Oslo📍
+
+					--
+
+					- Webstep / Oslo📍 
+
+					--
+
+					- Frontend @ Bufdir
+					
+					--
+
+					- ABB, Bouvet, Vinmonopolet, Statnett/Fifty, ParkettPartner, Bufdir
+
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+					## So... What is React? 🤔
+					---
+					- JS library
+					- Created by Facebook - Jordan Walke.
+					- Tool for building reausable UI components 🧰
+					- Current: `v18.0.0.`
+					- Facebook Newsfeed feature anno 2011
+					- [Frontend frameworks Trends](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks/)
+				</script>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+					## What is a JS framework (vs library)? 🧰
+					---
+					### Scenario: House 🏠️ [1]
+
+					- Framework = Buy a new house ready built - you just work with what is made. 🛋️ 
+					- Library = Build a house from sratch, you can choose everything; floor plan, architecture etc. 🏠️
+					---
+
+					<!-- <img src="resources/frameworks.png" width="30%" /> -->
+
+					### Frameworks 🛋️
+
+
+					- 👍️ Ready to go with best practices to follow 
+					- 👎️ Can overcomplicate things
+
+					---
+					<!-- <img src="resources/libraries.png" width="30%" /> -->
+
+					### Libraries 🏠️
+
+
+					* 👍️ You tailor the app based what you/your team wants and needs
+					* 👎️ Easier to make bad decisions and "eff up"
+
+				</script>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					<img src="resources/framework-v-lib.svg" />
+
+					 "The job determines the tool" - Me 👴
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+					#### Something nice to know:
+					##  Basic Terminology
+					---
+					DOM = Document Object Model.
+					
+					<img src="resources/dom.svg"  width="50%"/>
+				</script>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					### JSX - JavaScript XML
+
+					```js
+					// Am I better? 
+					const myElement = <h1>I a made using JSX!</h1>;
+
+					// Or am I..?
+					const myElement = React.createElement(
+							'h1', {}, 'I am too cool for JSX!'
+						);
+					```
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### ES6 - ECMAScript 6
+
+					- Standard for Javascript - 6th version of ECMAScript. 2015.
+
+					--
+
+					- Variables = `let, const, var`
+
+					--
+
+					- Arrow functions = function notation `let myFunc = () => {};`
+
+					--
+
+					- Array methods = `.map(), .join(), .pop(), .push()` etc
+
+					--
+
+					- Ternary operator = `isSomethingTrue ? yes : no`
+
+					--
+
+					- Spread operator = `var1, var2, ...the-rest-here`
+
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					### CDN - Content Delivery Network
+
+					- Group of servers spread across many locations
+					- Used for delivering stylesheets and javascript files (static assets) og libraries like as links (Bootsrap,
+					JQuery, React, ...)
+
+					```html
+						<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+							integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+							 crossorigin="anonymous">
+						</script>
+					```
+				</textarea>
+			</section>
+
+
+			<section data-markdown>
+				<script type="text/template">
+					#### Why React? 
+					### What makes it special❓️
+					---
+					- Virtual DOM in memory
+					- Virtual DOM = Blueprint of the actual DOM.
+					- Makes easy and fast to make changes ⚡️
+					- "What needs to be changed?" "OK, I will only change that!"
+					- Easily testable, good library support and control of tests monitoring
+				</script>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+					#### Something we need to know:
+					## Building Blocks 🧱
+					---
+					SPA = Single Page Application
+					
+					<img src="resources/spa.svg"  width="65%"/>
+				</script>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					### Components
+
+					- Independent and reusable bits of code. e.g. Car, Person, Book...
+					- Works in isolation. 
+					- Either "Class" or "Function" Components.
+					- Start component names with a capital letter. `MyComponent, Header, ComponentWithVeryLongName`
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### Class Components
+
+					- Used to be the only way to create Componets with state lifecycle events
+					- React Hooks have made Class Components less favorible.
+
+					--
+
+					- 👍️ Come with built-in state (i.e. `this.state = {isLoading: true}`)
+					- 👎️ Write more code to achieve the same as FC; more complex and less readable in comparison.
+
+					--
+
+					## Example
+					```js
+					import React, { Component } from "react";
+
+					class Header extens Component {
+						render() {
+							return <h1> Title <h1 />
+						}
+					}
+					```
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### Function Components
+
+					- 🆕 way of writing Components; 👍️ by React.
+					- Essentially like Class functions just written as functions; written with less code, easier to understand.
+					- If state and lifecycle methods are needed; use Hooks.
+
+					--
+
+					- 👍️ Faster, easier and cleaner in terms of developing, understanding and testing the code.
+					- 👎️ Nothing really negative, but some may have other opinions.. 😒
+
+					--
+
+					## Example 
+					```js
+					// ES6
+					import React from "react";
+					const Header = () => { return <h1> Title </h1> }
+
+					import React from "react";
+					function Header() { return <h1> Title </h1> }
+					````
+
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### "Props" aka Properties
+
+					- Object arguments used for passing data between components.
+					
+					--
+
+
+					## Given this... 
+
+					```js
+					// ./FirstComponent.jsx
+					<GreetComponent name={"Ola"} />
+					```
+
+					--
+
+					## You get... 
+					```js
+					// GreetComponent.jsx - with de-structuring
+					const GreetComponent = ({name}) => {
+						return <h1> Hola, {name}! </h1>
+					}
+
+					// GreetComponent.jsx - without de-structuring
+					const GreetComponent = (props) => {
+						return <h1> Hola, {props.name}! </h1>
+					}
+					```
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### Events
+
+					- Just like HTML events; allow us to person actions based on user "events"or interactions
+					- Events like; click = `onClick`, mouseover = `onHover`, change = `onChange`...
+					- 👍️ `onClick={sendMessage}`
+					- 👎️ `onClick="sendMessage()"`
+
+					--
+					
+					```js
+					const GetTriggered() {
+						const shotsFired = (a) => {
+							alert(a);
+						}
+
+						return (
+							<button onClick={() => shotsFired("Mr. Big Forehead")}>
+								Fire shots!
+							</button>
+						);
+					}
+					```
+
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### Conditional
+
+					- React lets you render componets conditionally think `if()` statements
+					
+					--
+
+
+					## Given this... 
+
+					```js
+					const MoneyBroke = () => {
+						return <h1>No money..<h2 />
+					}
+
+					const MoneyRich = () => {
+						return <h1>Chaa-ching!<h2 />
+						}
+
+					```
+
+					--
+
+					#### `if()` statement
+					## Method #1: 
+					```js
+					const BorrowMoney = ({ gotMoney }) => {
+
+						if (gotMoney) {
+							return <MoneyRich />
+						}	
+						return <MoneyBroke />
+					}
+					```
+
+					--
+
+					#### Logical `&&` Operator
+					## Method #2: 
+					```js
+					const BorrowMoney = ({ gotMoney }) => {
+						{ gotMoney &&
+							return <MoneyRich />
+						}
+					}
+					```
+
+					--
+
+					#### Ternary Operator `condition ? true : false`
+					## Method #3: 
+					```js
+					const BorrowMoney = ({ gotMoney }) => {
+						return (
+							{ gotMoney ? <MoneyRich /> : <MoneyBroke /> }
+						);
+					}
+					```
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### Lifecycle methods
+
+					- Methods for React to incite action when; a component is mounted, is unmounted, about to be updated etc.
+					- On mounting: `componentDidMount()`
+					- On umounting: `componentWillUnmount()`
+					- But then came "Hooks"...
+				</textarea>
+			</section>
+
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### React Hooks or Lifecycle Hooks
+
+					- Hooks allow us to "hook" in React features like state and lifecycle methods
+					- Hooks must be imported; 
+						- `import { useState } from 'react'`
+					- Rules;
+						- Can only be called inside function components
+						- Can only be called on the top level of a component
+						- Cannot be condtional
+
+					--
+
+					## `useState`
+
+					- Allows to track state in FC
+					- State = data or props that need to be tracked in an app
+					- Comprises of: 
+						1. inital state
+						2. a function to update the state
+						3. argument as the initial state
+					- `cosnt [color, setColor] = useState("red")`
+
+					--
+
+					```js
+					// Examples for Car (Component)
+
+					const [brand, setBrand] = useState("Ford");
+					const [model, setModel] = useState("Mustang");
+					const [year, setYear] = useState("1964");
+					const [color, setColor] = useState("red");
+
+					```
+
+				</textarea>
+			</section>
+
+
+			<!-- PART 2 -->
+			<!-- PART 2 -->
+			<!-- PART 2 -->
+			<!-- PART 2 -->
+			<!-- PART 2 -->
+			<!-- PART 2 -->
+
+			<section data-markdown>
+				<textarea data-template>
+					## Part 2. Digging a little deeper 🕳️
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					### Few things before we get started ⏲️
+
+					<img src="resources/gifs/wait-for-it.gif" width="50%" />
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### We need these things first: 
+
+					- Editor; I use [VSCode](https://code.visualstudio.com/download) ⬇️
+					- Github/git - Version Control & Hosting Code
+					- [Node](https://nodejs.org/en/download/)⬇️ (`v.16.15.0`) or @latest
+					- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)⬇️ (`v8.6.0`) or @latest
+
+					--
+
+					### Optionals 🎖️
+					- [NVM](https://github.com/nvm-sh/nvm#installation)⬇️ (Node Version Manager)
+					- [HomeBrew](https://docs.brew.sh/Installation)/[Choco](https://chocolatey.org/install) ⬇️
+
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+					#### Do we really need to?
+					## Walkthrough: Setting up the Environment 🖥️
+					
+				</script>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+
+					### Based on what we know so far:
+
+
+					```xml
+					<!doctype html>
+					<html>
+						<head>
+							<title>Our Basic HTML Page</title>
+							<meta name="description" content="Our first page">
+						</head>
+
+						<body>
+							<h1> Hello World!</h1>
+						</body>
+					</html>
+					```
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+
+					### This can give us React 🤯
+
+
+					```html
+					<!doctype html>
+					<html>
+
+						<head>
+							<title>Our slightly fancier React HTML Page</title>
+							<script 
+								src="https://unpkg.com/react@18/umd/react.development.js"
+								crossorigin>
+							</script>
+							<script 
+								src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+								crossorigin>
+							</script>
+							<script 
+								src="https://unpkg.com/@babel/standalone/babel.min.js">
+							</script>
+						</head>
+
+						<body>
+							<div id="mydiv">
+								<!-- This element's contents will be replaced. -->
+							</div>
+
+							<script type="text/babel">
+								function Hello() {
+									return <h1>Hello World!</h1>;
+								}
+
+							ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+							</script>
+
+						</body>
+
+					</html>
+					```
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					#### Whats really happening here: 
+
+					- The first two scripts let us write React code into our JS `scripts`
+						1. `react@18` = Holds the **react source** for components, state, props etc.
+						2. `react-dom@18` = The **glue** between React and the DOM (i.e. mounting the app to index i.e. `ReactDOM.render()` ) 
+					- Babel (JS compiler) allows us to write JSX syntax and ES6 in older browsers 
+
+					--
+
+					But... 
+
+					#### This isn't suitable for production releases! ⚠️
+				</textarea>
+			</section>
+
+
+			<section data-markdown>
+				<script type="text/template">
+					#### ~~Do we really need to?~~ 
+					#### Yep, we do... 😅
+					### Walkthrough: Setting up the Environment 🖥️
+					
+				</script>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### `create-react-app`
+
+					- Easy-to-setup environment for React, and according to docs; "[...] best way to start building a new single-page
+					application in React."
+
+					--
+
+					- "[Create React App](https://create-react-app.dev/docs/getting-started/)" or `create-react-app` ⬇️
+
+					--
+
+					- Official way to create Single-Page React Apps 
+
+					--
+
+					- "Start & get going" approach
+
+					--
+
+					- Under the hood; Babel (JS **compiler**) and `webpack` (JS **bundler**) 🥴
+
+					--
+
+					- You don't need to know anything about them! 🤩
+				</textarea>
+			</section>
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### Step-by-step 🚶
+
+					- First run the following command to create a React App called `my-first-app`
+					```shell
+					$ npx create-react-app my-first-app
+					```
+
+					--
+					
+					- To move into the project folder you just created:
+					```shell
+					$ cd my-first-app
+					```
+
+					--
+
+					- Run this command to start the development server
+					```shell
+					$ npm start
+					```
+
+					--
+
+					- A new browser window should open with your brand new React App. 
+					- If not, then try typing `localhost:3000` in the
+					adress bar.
+
+					--
+
+					## Congratz, its an app! 🤱👏
+					<img src="resources/gifs/first-app.gif" width="50%" />
+
+					
+				</textarea>
+			</section>
+
+			<!-- congfratualtions gif -->
+
+			<section data-markdown>
+				<script type="text/template">
+					#### Getting started 🧩
+					##  Exercise 0: 
+					---
+					Now go to your preferred edtior and open the folder `/my-first-app`
+					
+					---
+					```text
+					my-first-app
+					├── README.md
+					├── node_modules
+					├── package.json
+					├── .gitignore
+					├── public
+					│ ├── favicon.ico
+					│ ├── index.html
+					│ ├── logo192.png
+					│ ├── logo512.png
+					│ ├── manifest.json
+					│ └── robots.txt
+					└── src
+					├── App.css
+					├── App.js
+					├── App.test.js
+					├── index.css
+					├── index.js
+					├── logo.svg
+					├── serviceWorker.js
+					└── setupTests.js
+					```
+
+					---
+					## Somethings to know 🤓
+
+					- `$ npm start` - starts the app i development mode 
+					- `$ npm test` - runs a test watcher to moniter tests
+					- `$ npm build` - builds the app for production 
+
+				</script>
+			</section>
+
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### How to structure things naisly 🗂️
+
+					- So many different opinions, it's mostly about preference
+					- ...but most people agree on certain things
+
+					--
+
+					- Decouple logic from UI
+
+					--
+					
+					- Single Responsibility Principle - a component should have ONE reason to change, one specific purpose.
+
+					--
+
+					- Keep your code DRY. Don't Repeat Yourself, but sometimes code duplicates are a "necessary evil"
+
+					--
+
+					- Use Functional Components (FC) instead of Class.
+
+					--
+
+					- Follow the "React way" of creating separate folders for all files related to component
+
+					--
+
+					- Allways follow naming conventions e.g. `PascalCase` for Components etc. `const visible = true` < `const
+						isVisible=true`
+
+					--
+
+					- Keep Components as simple as possible - see Single Responsibility Principle
+
+					--
+
+					- Consider using Typescript (*not so important in the beginning*)
+
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<script type="text/template">
+
+					## My personal recommendation/preference🤓
+
+					```txt
+					src/
+					├── feature/
+					│ ├── User/
+					│ ├── Error/
+					│ └── User/
+					│ │── User.jsx
+					│ │── User.css
+					│ └── User.test.js
+					└── components/
+					├── App/
+					├── Button/
+					└── List/
+
+					---
+
+					## Other good methods 📚️
+
+					- [React Recommendations/tips](https://reactjs.org/docs/faq-structure.html)
+					- [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+					- [Good blog from Robin Wieruch](https://www.robinwieruch.de/react-folder-structure/)
+				</script>
+			</section>
+
+
+
+			<!-- PART 3 -->
+			<!-- PART 3 -->
+			<!-- PART 3 -->
+			<!-- PART 3 -->
+			<!-- PART 3 -->
+			<!-- PART 3 -->
+
+			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+				<textarea data-template>
+					### `create-react-app`
+
+					- 
+					- 
+					- 
+					- 
+					- 
+				</textarea>
+			</section>
+
+
 		</div>
 	</div>
 
@@ -46,6 +838,9 @@
 			hash: true,
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			markdown: {
+				smartypants: true
+			},
 
 			keyboard: {
 				37: 'prev',
@@ -54,21 +849,7 @@
 				40: 'next'
 			},
 
-			transition: 'convex',
-			dependencies: [{
-					src: 'plugin/markdown/markdown.js'
-				},
-				{
-					src: 'plugin/notes/notes.js',
-					async: true
-				},
-				{
-					src: 'plugin/highlight/highlight.js',
-					async: true
-				}
-			]
-
-
+			transition: 'slide',
 
 		});
 	</script>
